@@ -60,22 +60,20 @@ div strong{
     font-size: 14px;
     max-width: 400px;
     line-height: 1.6;
+    
   }
 
   .right {
     display: grid;
-    grid-template-columns: repeat(2, 250px);
-    gap: 30px 40px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
     flex: 1;
     min-width: 300px;
+    padding-top: 10px;
+  
   }
-
-  .feature {
-    display: flex;
-    gap: 15px;
-    align-items: flex-start;
-  }
-
+  
+  
   .icon-circle {
     width: 50px;
     height: 50px;
@@ -92,13 +90,13 @@ div strong{
     line-height: 1.5;
   }
 
-  /* Placeholder icons */
+
   .icon-circle::before {
     content: "★";
     color: white;
   }
 
-  /* Icons per feature */
+  
   .feature:nth-child(1) .icon-circle::before { content: "🎖️"; }
   .feature:nth-child(2) .icon-circle::before { content: "🧠"; }
   .feature:nth-child(3) .icon-circle::before { content: "📈"; }
